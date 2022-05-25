@@ -42,9 +42,9 @@ import esp8266IconURL from './esp8266/esp8266.png';
 import esp8266ConnectionIconURL from './esp8266/esp8266-illustration.svg';
 import esp8266ConnectionSmallIconURL from './esp8266/esp8266-small.svg';
 
-import makeymakeyIconURL from './makeymakey/makeymakey.png';
-import makeymakeyConnectionIconURL from './makeymakey/makeymakey-illustration.svg';
-import makeymakeyConnectionSmallIconURL from './makeymakey/makeymakey-small.svg';
+import zqrobot201IconURL from './zqrobot201/zqrobot201.png';
+import zqrobot201ConnectionIconURL from './zqrobot201/zqrobot201-illustration.svg';
+import zqrobot201ConnectionSmallIconURL from './zqrobot201/zqrobot201-small.svg';
 
 const deviceData = [
     /**
@@ -72,6 +72,31 @@ const deviceData = [
         programMode: ['realtime'],
         programLanguage: ['block'],
         tags: ['realtime']
+    },
+    {
+        name: 'ZQrobot201',
+        deviceId: 'ZQrobot201',
+        //manufactor: 'arduino.cc',
+        //learnMore: 'https://store.arduino.cc/usa/arduino-uno-rev3',
+        type: DeviceType.arduino,
+        iconURL: zqrobot201IconURL,
+        description: '111',
+        featured: true,
+        disabled: false,
+        bluetoothRequired: false,
+        serialportRequired: true,
+        defaultBaudRate: '9600',
+        internetConnectionRequired: false,
+        launchPeripheralConnectionFlow: true,
+        useAutoScan: false,
+        connectionIconURL: zqrobot201ConnectionIconURL,
+        connectionSmallIconURL: zqrobot201ConnectionSmallIconURL,
+        connectingMessage: '222',
+        baseToolBoxXml: arduinoBaseToolBox,
+        programMode: ['upload'],
+        programLanguage: ['block', 'c', 'cpp'],
+        tags: ['arduino'],
+        helpLink: 'https://store.arduino.cc/usa/arduino-uno-rev3'
     },
     {
         name: 'Arduino Uno',
@@ -368,43 +393,6 @@ const deviceData = [
         programLanguage: ['block', 'microPython'],
         tags: ['microPython'],
         helpLink: 'https://microbit.org/get-started/first-steps/introduction/'
-    },
-    {
-        name: 'Makey Makey',
-        deviceId: 'makeyMakey',
-        manufactor: 'makeymakey.com',
-        learnMore: 'https://makeymakey.com/',
-        type: DeviceType.arduino,
-        iconURL: makeymakeyIconURL,
-        description: (
-            <FormattedMessage
-                defaultMessage="Make anything into a key."
-                description="Description for the Makey Makey device"
-                id="gui.device.makeymakey.description"
-            />
-        ),
-        featured: true,
-        disabled: false,
-        bluetoothRequired: false,
-        serialportRequired: true,
-        defaultBaudRate: '115200',
-        internetConnectionRequired: false,
-        launchPeripheralConnectionFlow: true,
-        useAutoScan: false,
-        connectionIconURL: makeymakeyConnectionIconURL,
-        connectionSmallIconURL: makeymakeyConnectionSmallIconURL,
-        connectingMessage: (
-            <FormattedMessage
-                defaultMessage="Connecting"
-                description="Message to help people connect to their device."
-                id="gui.device.makeyMakey.connectingMessage"
-            />
-        ),
-        baseToolBoxXml: arduinoBaseToolBox,
-        programMode: ['upload'],
-        programLanguage: ['block', 'c', 'cpp'],
-        tags: ['arduino'],
-        helpLink: 'https://makeymakey.com'
     },
     /**
      * For those parent devices that exist in VM but are not displayed in GUI
