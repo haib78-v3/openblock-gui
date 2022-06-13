@@ -431,7 +431,7 @@ const makeDeviceLibrary = (deviceList = null) => {
             return null;
         });
 
-        regeneratedDeviceData.unshift(deviceData[0]); // add unselect deive in the head.
+        //regeneratedDeviceData.unshift(deviceData[0]); // add unselect deive in the head.
     } else {
         regeneratedDeviceData = deviceData;
     }
