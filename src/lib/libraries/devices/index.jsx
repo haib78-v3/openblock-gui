@@ -6,6 +6,7 @@ import {DeviceType} from '../../device';
 
 
 import arduinoBaseToolBox from './baseToolbox/arduino';
+import arduinoBaseToolBox1 from './baseToolbox/arduino1';
 import microbitBaseToolBox from './baseToolbox/microbit';
 
 import unselectDeviceIconURL from './unselectDevice/unselectDevice.png';
@@ -51,36 +52,13 @@ const deviceData = [
      * Unselect the deivce back to pure scratch mode
      */
     {
-        name: (
-            <FormattedMessage
-                defaultMessage="Unselect device"
-                description="Name for the unselect device"
-                id="gui.device.unselectDevice.name"
-            />
-        ),
-        deviceId: 'unselectDevice',
-        iconURL: unselectDeviceIconURL,
-        description: (
-            <FormattedMessage
-                defaultMessage="Unselect the device, return to pure realtime programming mode."
-                description="Description for the unselect device"
-                id="gui.device.unselectDevice.description"
-            />
-        ),
-        featured: true,
-        hide: false,
-        programMode: ['realtime'],
-        programLanguage: ['block'],
-        tags: ['realtime']
-    },
-    {
         name: 'ZQrobot201',
         deviceId: 'ZQrobot201',
         //manufactor: 'arduino.cc',
         //learnMore: 'https://store.arduino.cc/usa/arduino-uno-rev3',
         type: DeviceType.arduino,
         iconURL: zqrobot201IconURL,
-        description: '111',
+        //description: '111',
         featured: true,
         disabled: false,
         bluetoothRequired: false,
@@ -92,11 +70,11 @@ const deviceData = [
         connectionIconURL: zqrobot201ConnectionIconURL,
         connectionSmallIconURL: zqrobot201ConnectionSmallIconURL,
         connectingMessage: '222',
-        baseToolBoxXml: arduinoBaseToolBox,
+        baseToolBoxXml: arduinoBaseToolBox1,
         programMode: ['upload'],
         programLanguage: ['block', 'c', 'cpp'],
-        tags: ['arduino'],
-        helpLink: 'https://store.arduino.cc/usa/arduino-uno-rev3'
+        tags: ['ZQrobot'],
+        //helpLink: 'https://store.arduino.cc/usa/arduino-uno-rev3'
     },
     {
         name: 'Arduino Uno',
@@ -134,7 +112,7 @@ const deviceData = [
         programLanguage: ['block', 'c', 'cpp'],
         tags: ['arduino'],
         helpLink: 'https://store.arduino.cc/usa/arduino-uno-rev3'
-    },
+    }/*,
     {
         name: 'Arduino Nano',
         deviceId: 'arduinoNano',
@@ -393,10 +371,11 @@ const deviceData = [
         programLanguage: ['block', 'microPython'],
         tags: ['microPython'],
         helpLink: 'https://microbit.org/get-started/first-steps/introduction/'
-    },
+    },*/
     /**
      * For those parent devices that exist in VM but are not displayed in GUI
      */
+    /*
     {
         deviceId: 'arduinoUnoUltra',
         type: DeviceType.arduino,
@@ -404,7 +383,7 @@ const deviceData = [
         disabled: false,
         hide: true,
         baseToolBoxXml: arduinoBaseToolBox
-    }
+    }*/
 ];
 
 /**
