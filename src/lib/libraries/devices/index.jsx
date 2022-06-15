@@ -77,6 +77,43 @@ const deviceData = [
         //helpLink: 'https://store.arduino.cc/usa/arduino-uno-rev3'
     },
     {
+        name: 'ZQrobot202',
+        deviceId: 'arduinoEsp32',
+        //manufactor: 'espressif',
+        //learnMore: 'https://www.espressif.com/',
+        type: DeviceType.arduino,
+        iconURL: esp32IconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage="Wi-Fi & Bluetooth control board with rich functions."
+                description="Description for the esp32 device"
+                id="gui.device.esp32.description"
+            />
+        ),
+        featured: true,
+        disabled: false,
+        bluetoothRequired: false,
+        serialportRequired: true,
+        defaultBaudRate: '115200',
+        internetConnectionRequired: false,
+        launchPeripheralConnectionFlow: true,
+        useAutoScan: false,
+        connectionIconURL: esp32ConnectionIconURLL,
+        connectionSmallIconURL: esp32ConnectionSmallIconURL,
+        connectingMessage: (
+            <FormattedMessage
+                defaultMessage="Connecting"
+                description="Message to help people connect to their esp32."
+                id="gui.device.esp32.connectingMessage"
+            />
+        ),
+        baseToolBoxXml: arduinoBaseToolBox,
+        programMode: ['upload'],
+        programLanguage: ['block', 'c', 'cpp'],
+        tags: ['arduino'],
+        helpLink: 'https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/hw-reference/esp32/get-started-devkitc.html'
+    },
+    {
         name: 'Arduino Uno',
         deviceId: 'arduinoUno',
         manufactor: 'arduino.cc',
