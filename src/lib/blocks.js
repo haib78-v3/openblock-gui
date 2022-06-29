@@ -8,6 +8,9 @@ import iconv from 'iconv-lite';
  */
 export default function (vm) {
 
+
+
+
     const jsonForMenuBlock = function (name, menuOptionsFn, colors, start) {
         return {
             message0: '%1',

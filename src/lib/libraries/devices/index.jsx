@@ -6,8 +6,7 @@ import {DeviceType} from '../../device';
 
 
 import arduinoBaseToolBox from './baseToolbox/arduino';
-import arduinoBaseToolBox201 from './baseToolbox/arduino1';
-import arduinoBaseToolBox202 from './baseToolbox/arduino2';
+import arduinoBaseToolBoxZQ from './baseToolbox/arduino1';
 import microbitBaseToolBox from './baseToolbox/microbit';
 
 import unselectDeviceIconURL from './unselectDevice/unselectDevice.png';
@@ -73,11 +72,12 @@ const deviceData = [
         useAutoScan: false,
         connectionIconURL: zqrobot201ConnectionIconURL,
         connectionSmallIconURL: zqrobot201ConnectionSmallIconURL,
-        connectingMessage: '222',
-        baseToolBoxXml: arduinoBaseToolBox201,
+        //connectingMessage: '222',
+        baseToolBoxXml: arduinoBaseToolBoxZQ,
         programMode: ['upload'],
         programLanguage: ['block', 'c', 'cpp'],
-        tags: ['ZQrobot'],
+        deviceExtensions: ['ZQrobot'],
+        tags: ['arduino'],
         //helpLink: 'https://store.arduino.cc/usa/arduino-uno-rev3'
     },
     {
@@ -97,10 +97,11 @@ const deviceData = [
         useAutoScan: false,
         connectionIconURL: zqrobot202ConnectionIconURL,
         connectionSmallIconURL: zqrobot202ConnectionSmallIconURL,
-        baseToolBoxXml: arduinoBaseToolBox202,
+        baseToolBoxXml: arduinoBaseToolBoxZQ,
         programMode: ['upload'],
         programLanguage: ['block', 'c', 'cpp'],
-        tags: ['ZQrobot'],
+        deviceExtensions: ['ZQrobot'],
+        tags: ['arduino'],
         //helpLink: 'https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/hw-reference/esp32/get-started-devkitc.html'
     },
     {
@@ -137,6 +138,7 @@ const deviceData = [
         baseToolBoxXml: arduinoBaseToolBox,
         programMode: ['realtime', 'upload'],
         programLanguage: ['block', 'c', 'cpp'],
+        deviceExtensions: ['oled','rgbLedStrip'],
         tags: ['arduino'],
         helpLink: 'https://store.arduino.cc/usa/arduino-uno-rev3'
     },

@@ -27,7 +27,7 @@ const messages = defineMessages({
 });
 
 const ALL_TAG = {tag: 'all', intlLabel: messages.allTag};
-const tagListPrefix = [];  //板卡所有显示  ALL_TAG
+const tagListPrefix = [];  //板卡所有显示   const tagListPrefix = [ALL_TAG];
 
 class LibraryComponent extends React.Component {
     constructor (props) {
