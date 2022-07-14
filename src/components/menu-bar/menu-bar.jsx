@@ -88,6 +88,7 @@ import remixIcon from './icon--remix.svg';
 import dropdownCaret from './dropdown-caret.svg';
 import languageIcon from '../language-selector/language-icon.svg';
 import aboutIcon from './icon--about.svg';
+import saveIcon from './icon--save.svg';
 import linkSocketIcon from './icon--link-socket.svg'; // eslint-disable-line no-unused-vars
 
 import scratchLogo from './scratch-logo.svg';
@@ -518,7 +519,7 @@ class MenuBar extends React.Component {
                             //onClick={this.props.onClickLogo}
                         />
                     </div>
-                    {(this.props.canChangeLanguage) && (<div
+                    {/*(this.props.canChangeLanguage) && (<div
                         className={classNames(styles.menuBarItem, styles.hoverable, styles.languageMenu)}
                     >
                         <div>
@@ -532,7 +533,7 @@ class MenuBar extends React.Component {
                             />
                         </div>
                         <LanguageSelector label={this.props.intl.formatMessage(ariaMessages.language)} />
-                    </div>)}
+                    </div>)*/}
                     {(this.props.canManageFiles) && (
                         <div
                             className={classNames(styles.menuBarItem, styles.hoverable, {
@@ -733,6 +734,19 @@ class MenuBar extends React.Component {
                             username={this.props.authorUsername}
                         />
                     ) : null)}
+                    {(this.props.canManageFiles) && (
+                        <SB3Downloader>{(className, downloadProjectCallback) => (
+                            <div
+                                className={classNames(styles.menuBarItem, styles.hoverable)}
+                                onClick={this.getSaveToComputerHandler(downloadProjectCallback)}
+                            >
+                                <img
+                                    className={styles.saveIcon}
+                                    src={saveIcon}
+                                />
+                            </div>
+                        )}</SB3Downloader>
+                    )}
                 </div>
                 <div className={styles.tailMenu}>
                     <div
@@ -768,6 +782,7 @@ class MenuBar extends React.Component {
                     </div>
                     <Divider className={classNames(styles.divider)} />
                         */}
+                        {/*
                     <div
                         aria-label={this.props.intl.formatMessage(ariaMessages.tutorials)}
                         className={classNames(styles.menuBarItem, styles.hoverable)}
@@ -779,6 +794,7 @@ class MenuBar extends React.Component {
                         />
                         <FormattedMessage {...ariaMessages.tutorials} />
                     </div>
+                    */}
                     <Divider className={classNames(styles.divider)} />
                     <div className={classNames(styles.menuBarItem, styles.programModeGroup)}>
                         <Switch
@@ -830,12 +846,14 @@ class MenuBar extends React.Component {
                                 onRequestClose={this.props.onRequestCloseSetting}
                             >
                                 <MenuSection>
+                                    {/*
                                     <MenuItem
                                         isRtl={this.props.isRtl}
                                         onClick={this.handleCheckUpdate}
                                     >
                                         {checkUpdate}
                                     </MenuItem>
+                        */}
                                     <MenuItem
                                         isRtl={this.props.isRtl}
                                         onClick={this.handleClearCache}

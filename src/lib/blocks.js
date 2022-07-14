@@ -7,8 +7,9 @@ import iconv from 'iconv-lite';
  * @return {ScratchBlocks} ScratchBlocks connected with the vm
  */
 export default function (vm) {
+    
 
-
+    
 
 
     const jsonForMenuBlock = function (name, menuOptionsFn, colors, start) {
