@@ -76,7 +76,7 @@ const deviceData = [
         baseToolBoxXml: arduinoBaseToolBoxZQ,
         programMode: ['upload'],
         programLanguage: ['block', 'c', 'cpp'],
-        //deviceExtensions: ['ZQrobot'],
+        deviceExtensions: ['OLEDZQ'],
         tags: ['arduino'],
         //helpLink: 'https://store.arduino.cc/usa/arduino-uno-rev3'
     },
@@ -100,7 +100,7 @@ const deviceData = [
         baseToolBoxXml: arduinoBaseToolBoxZQ,
         programMode: ['upload'],
         programLanguage: ['block', 'c', 'cpp'],
-        //deviceExtensions: ['ZQrobot'],
+        deviceExtensions: ['OLEDZQ'],
         tags: ['arduino'],
         //helpLink: 'https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/hw-reference/esp32/get-started-devkitc.html'
     },
